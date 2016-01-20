@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="reproductorAudio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qHL-6E-pBM">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLv-Q5-LPs">
+                                        <rect key="frame" x="20" y="8" width="280" height="216"/>
+                                    </pickerView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="neu-uN-KMj">
+                                        <rect key="frame" x="20" y="261" width="280" height="181"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="181" id="eg3-ND-eWY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPt-Jn-WsN">
+                                        <rect key="frame" x="139" y="232" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7y-dH-yyr">
+                                        <rect key="frame" x="250" y="450" width="50" height="50"/>
+                                        <state key="normal" title="Stop" backgroundImage="StopFilled-50.png"/>
+                                        <connections>
+                                            <action selector="parar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ZD-N1-4jU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-L7-aUc">
+                                        <rect key="frame" x="135" y="450" width="50" height="50"/>
+                                        <state key="normal" title="Pause" backgroundImage="PauseFilled-50.png"/>
+                                        <connections>
+                                            <action selector="pausar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVT-sx-Fi2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1l-xC-HaG">
+                                        <rect key="frame" x="20" y="450" width="50" height="50"/>
+                                        <state key="normal" title="Play" backgroundImage="PlayFilled-50.png"/>
+                                        <connections>
+                                            <action selector="reproducir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJR-6s-lgc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="KLv-Q5-LPs" firstAttribute="centerX" secondItem="qHL-6E-pBM" secondAttribute="centerX" id="BDO-4M-GiO"/>
+                                    <constraint firstItem="neu-uN-KMj" firstAttribute="top" secondItem="zPt-Jn-WsN" secondAttribute="bottom" constant="8" symbolic="YES" id="Cto-aZ-TD3"/>
+                                    <constraint firstItem="f7y-dH-yyr" firstAttribute="trailing" secondItem="neu-uN-KMj" secondAttribute="trailing" id="D9g-VF-B40"/>
+                                    <constraint firstItem="KLv-Q5-LPs" firstAttribute="leading" secondItem="qHL-6E-pBM" secondAttribute="leading" constant="20" id="EhD-Nx-BGc"/>
+                                    <constraint firstItem="KLv-Q5-LPs" firstAttribute="top" secondItem="qHL-6E-pBM" secondAttribute="topMargin" id="K7r-nI-jPc"/>
+                                    <constraint firstItem="neu-uN-KMj" firstAttribute="centerX" secondItem="zPt-Jn-WsN" secondAttribute="centerX" id="KFv-3Q-Tqa"/>
+                                    <constraint firstItem="neu-uN-KMj" firstAttribute="centerX" secondItem="Hky-L7-aUc" secondAttribute="centerX" id="OTS-Bv-5DO"/>
+                                    <constraint firstItem="G1l-xC-HaG" firstAttribute="top" secondItem="neu-uN-KMj" secondAttribute="bottom" constant="8" id="Pzq-fM-Ts9"/>
+                                    <constraint firstItem="neu-uN-KMj" firstAttribute="leading" secondItem="G1l-xC-HaG" secondAttribute="leading" id="aBj-yq-HhT"/>
+                                    <constraint firstItem="Hky-L7-aUc" firstAttribute="baseline" secondItem="f7y-dH-yyr" secondAttribute="baseline" id="eHR-fH-MLy"/>
+                                    <constraint firstItem="Hky-L7-aUc" firstAttribute="baseline" secondItem="G1l-xC-HaG" secondAttribute="baseline" id="l7c-Y8-qu3"/>
+                                    <constraint firstAttribute="bottom" secondItem="G1l-xC-HaG" secondAttribute="bottom" constant="48" id="ocU-v2-JVi"/>
+                                    <constraint firstItem="KLv-Q5-LPs" firstAttribute="centerX" secondItem="zPt-Jn-WsN" secondAttribute="centerX" id="uEp-u8-ZCj"/>
+                                    <constraint firstItem="neu-uN-KMj" firstAttribute="leading" secondItem="KLv-Q5-LPs" secondAttribute="leading" id="wWH-gD-UTc"/>
+                                    <constraint firstAttribute="trailing" secondItem="KLv-Q5-LPs" secondAttribute="trailing" constant="20" id="yyf-xn-3hd"/>
+                                    <constraint firstItem="zPt-Jn-WsN" firstAttribute="top" secondItem="KLv-Q5-LPs" secondAttribute="bottom" constant="8" symbolic="YES" id="zxA-3R-29f"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qHL-6E-pBM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KZ9-cD-15p"/>
+                            <constraint firstItem="qHL-6E-pBM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SrR-TP-GCa"/>
+                            <constraint firstItem="qHL-6E-pBM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wYs-JU-BW6"/>
+                            <constraint firstItem="qHL-6E-pBM" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="x9g-eP-qrm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="musicaPicker" destination="KLv-Q5-LPs" id="5hG-Z8-Phz"/>
+                        <outlet property="tituloCancionRepro" destination="zPt-Jn-WsN" id="6Tg-Uu-iWd"/>
+                        <outlet property="visualizadorPortada" destination="neu-uN-KMj" id="hpJ-Tw-1pA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="452"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PauseFilled-50.png" width="50" height="50"/>
+        <image name="PlayFilled-50.png" width="50" height="50"/>
+        <image name="StopFilled-50.png" width="50" height="50"/>
+    </resources>
+</document>
