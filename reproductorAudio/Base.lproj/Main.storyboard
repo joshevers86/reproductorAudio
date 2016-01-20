@@ -62,6 +62,13 @@
                                             <action selector="subirAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a88-DD-uB2"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8e-JC-9Xo">
+                                        <rect key="frame" x="155" y="508" width="30" height="30"/>
+                                        <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="bajarAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPj-ji-XHs"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-L7-aUc">
                                         <rect key="frame" x="135" y="450" width="50" height="50"/>
                                         <constraints>
@@ -72,15 +79,16 @@
                                             <action selector="pausar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVT-sx-Fi2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8e-JC-9Xo">
-                                        <rect key="frame" x="155" y="508" width="30" height="30"/>
-                                        <state key="normal" title="-"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gq9-hV-dPm">
+                                        <rect key="frame" x="204" y="508" width="50" height="30"/>
+                                        <state key="normal" title="Shuffle"/>
                                         <connections>
-                                            <action selector="bajarAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPj-ji-XHs"/>
+                                            <action selector="reproducirAleatorio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uiN-M2-IzU"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="gq9-hV-dPm" firstAttribute="baseline" secondItem="z8e-JC-9Xo" secondAttribute="baseline" id="3rh-Zf-q8H"/>
                                     <constraint firstItem="G1l-xC-HaG" firstAttribute="baseline" secondItem="f7y-dH-yyr" secondAttribute="firstBaseline" id="5oi-96-mOj"/>
                                     <constraint firstItem="KLv-Q5-LPs" firstAttribute="centerX" secondItem="qHL-6E-pBM" secondAttribute="centerX" id="BDO-4M-GiO"/>
                                     <constraint firstItem="z8e-JC-9Xo" firstAttribute="centerX" secondItem="qHL-6E-pBM" secondAttribute="centerX" constant="10" id="Brn-5c-c67"/>
@@ -89,6 +97,7 @@
                                     <constraint firstItem="KLv-Q5-LPs" firstAttribute="leading" secondItem="qHL-6E-pBM" secondAttribute="leading" constant="20" id="EhD-Nx-BGc"/>
                                     <constraint firstItem="Hky-L7-aUc" firstAttribute="baseline" secondItem="G1l-xC-HaG" secondAttribute="baseline" id="FTY-6Z-Ifj"/>
                                     <constraint firstAttribute="bottom" secondItem="uvE-hW-Sgh" secondAttribute="bottom" constant="10" id="HKa-ts-Nnh"/>
+                                    <constraint firstItem="gq9-hV-dPm" firstAttribute="leading" secondItem="z8e-JC-9Xo" secondAttribute="trailing" constant="19" id="Jsc-lo-sgz"/>
                                     <constraint firstItem="KLv-Q5-LPs" firstAttribute="top" secondItem="qHL-6E-pBM" secondAttribute="topMargin" id="K7r-nI-jPc"/>
                                     <constraint firstItem="neu-uN-KMj" firstAttribute="centerX" secondItem="zPt-Jn-WsN" secondAttribute="centerX" constant="-21" id="KFv-3Q-Tqa"/>
                                     <constraint firstItem="f7y-dH-yyr" firstAttribute="top" secondItem="G1l-xC-HaG" secondAttribute="top" id="NKe-4t-oAV"/>

@@ -191,6 +191,28 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     }
 
+    
+    @IBAction func reproducirAleatorio(sender: AnyObject) {
+        let audio = Int (arc4random()) % canciones.count
+        let sonidoURL = NSBundle.mainBundle().URLForResource("sound/"+canciones[audio][0], withExtension: canciones[audio][1])
+        
+        do {
+            try reproductor = AVAudioPlayer(contentsOfURL: sonidoURL!)
+            
+        }catch {
+            print("No existe el fichero")
+        }
+        if !reproductor.playing{
+            
+            let pp:String = "cover/"+portadas[audio][0]+"."+portadas[audio][1]
+
+            visualizadorPortada.image = UIImage(named: pp)
+            
+            tituloCancionRepro.text = canciones[audio][0]
+            reproductor.play()
+        }
+        
+    }
 
 }
 
