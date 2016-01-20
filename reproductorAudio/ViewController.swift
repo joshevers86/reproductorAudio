@@ -36,6 +36,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     
     
+    @IBAction func subirAudio(sender: AnyObject) {
+        reproductor.volume++
+    }
+    
+    
+    @IBAction func bajarAudio(sender: AnyObject) {
+        reproductor.volume--
+    }
     private func listarAudios () {
         let fm = NSFileManager.defaultManager()
         let path = NSBundle.mainBundle().resourcePath!
